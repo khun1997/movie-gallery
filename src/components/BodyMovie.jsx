@@ -7,7 +7,6 @@ const BodyMovie = () => {
     "https://api.themoviedb.org/3/movie/popular?api_key=11356634b9dcf6295eeb70774a206345&language=en-US";
 
   const [movies, loading] = useFetchApi(url);
-  console.log(movies);
   return (
     <>
       <div className="">

@@ -6,7 +6,6 @@ import { PlayCircleIcon } from "@heroicons/react/24/solid";
 
 const HomeMovies = () => {
   const [movies, loading] = useFetchApi();
-  console.log(movies);
   return (
     <div>
       {loading ? (

@@ -22,7 +22,6 @@ const useFetchApi = () => {
       console.log(error.message);
     }
   };
-  // console.log(moives)
   return [moives, loading, error];
 };
 
