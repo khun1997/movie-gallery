@@ -6,6 +6,7 @@ import { PlayCircleIcon } from "@heroicons/react/24/solid";
 
 const HomeMovies = () => {
   const [movies, loading] = useFetchApi();
+  console.log(movies)
   return (
     <div>
       {loading ? (
@@ -15,10 +16,10 @@ const HomeMovies = () => {
           options={{
             type: "loop",
             arrows: false,
-            rewind: true,
-            rewindSpeed: 40000,
+            // rewind: true,
+            // rewindSpeed: 40000,
             autoplay: true,
-            interval: 6000,
+            interval: 4000,
           }}
         >
           {movies.map((movie) => {
@@ -34,8 +35,8 @@ const HomeMovies = () => {
                     alt=""
                   />
                   {/* text box in home open */}
-                  <div className="absolute w-96 p-5 h-auto z-1 left-32 bottom-40  text-white opacity-80 bg-gray-900 rounded-md">
-                    <p className="text-2xl my-2">{movie.title}</p>
+                  <div className="absolute w-2/6 p-5 h-auto z-1 left-32 bottom-32 text-white opacity-80 bg-gray-900 rounded-md">
+                    <p className="text-2xl my-2">{movie.original_title}</p>
                     <p className="text-sm my-2">
                       release date : {movie.release_date}
                     </p>

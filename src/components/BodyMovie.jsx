@@ -7,6 +7,7 @@ const BodyMovie = () => {
     "https://api.themoviedb.org/3/movie/popular?api_key=11356634b9dcf6295eeb70774a206345&language=en-US";
 
   const [movies, loading] = useFetchApi(url);
+  console.log(movies);
   return (
     <>
       <div className="">
@@ -23,20 +24,31 @@ const BodyMovie = () => {
               {movies.map((movie) => {
                 return (
                   // card start
-                  <div key={movie.id} className="relative w-96 h-auto m-3 p-4 hover:scale-110 transition ease-in-out duration-500 border-solid border border-gray-500 rounded-md border-opacity-50">
+                  <div
+                    key={movie.id}
+                    className="relative w-80 h-auto group m-3 p-4 hover:scale-110 transition ease-in-out duration-500 border-solid border border-gray-500 rounded-md border-opacity-50"
+                  >
                     <img
-                      // className="w-96 h-52"
+                      className="group-hover:opacity-70"
                       src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`}
                       alt=""
                     />
+                    <button className="group-hover:w-16 h-16 text-red-600 absolute left-32 top-16">
+                      <PlayCircleIcon />
+                    </button>
                     {/* text box in card open */}
-                    <div className="h-52">
-                      <p className="text-white text-sm my-2 ">{movie.title}</p>
-                      <p className="text-gray-500 text-xs mb-2">{movie.overview}</p>
-                      <button className=" w-28 h-9 absolute bottom-3 bg-white text-black border-solid  rounded inline-block ">
-                        Watch
-                        <PlayCircleIcon className="w-8 h-5 inline-block left-0 " />
-                      </button>
+                    <div className="h-auto">
+                      <p className="text-red-500 text-lg my-2 ">{movie.title}</p>
+                      <p className="text-xs my-2 text-white">
+                        release date : {movie.release_date}
+                      </p>
+                      <p className="text-white mb-1 ">Overview</p>
+                      <p className="text-gray-500 text-xs mb-2">
+                        {movie.overview}
+                      </p>
+                      {/* <button className=" w-28 h-9 bottom-3 bg-white text-black border-solid  rounded inline-block ">
+                        Details
+                      </button> */}
                     </div>
                     {/* text box in card close */}
                   </div>
