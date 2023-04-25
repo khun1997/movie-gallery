@@ -5,8 +5,8 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { PlayCircleIcon } from "@heroicons/react/24/solid";
 
 const HomeMovies = () => {
-  const [movies, loading] = useFetchApi();
-  console.log(movies)
+  const [movies, loading] = useFetchApi("https://api.themoviedb.org/3/movie/popular?api_key=11356634b9dcf6295eeb70774a206345&language=en-US");
+  // console.log(movies)
   return (
     <div>
       {loading ? (
