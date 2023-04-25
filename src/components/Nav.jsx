@@ -3,11 +3,11 @@ import { NavLink } from "react-router-dom";
 const Nav = () => {
   return (
     <>
-      <section className="flex justify-between text-red-500 mx-7">
+      <section className="flex justify-between  mx-7">
         <a href="/" className="text-red-500 text-3xl p-3">
           MOVIE GALLERY
         </a>
-        <div className="flex justify-center items-center ">
+        <div className="flex justify-center items-center text-red-500 ">
           <NavLink to={"/"}>Popular </NavLink>
           <p className="mx-3">|</p>
           <NavLink to={"/upcoming"}>Upcoming</NavLink>
@@ -17,7 +17,7 @@ const Nav = () => {
             {/* <span class="sr-only">Search</span> */}
             <button class="absolute inset-y-0 right-2 flex items-center pl-2">
               <svg
-                className="h-7 w-7 text-black"
+                className="h-8 w-8 text-black"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
