@@ -46,7 +46,7 @@ const HomeMovies = () => {
                     </p>
                     <div className="justify-center items-center">
                       {/* watch button */}
-                      <button className="w-40 my-2 p-1 h-10 bg-white border-solid border-red-600 border-2	 rounded inline-block text-red-500 ">
+                      <button className="w-40 my-2 p-1 h-12 bg-red-700 border-solid border-red-700 border-2	 rounded inline-block text-white justify-center items-center hover:scale-110 transition ease-in-out duration-500">
                         Watch Now
                         <PlayCircleIcon className="w-8 ml-2 inline-block left-0 " />
                       </button>

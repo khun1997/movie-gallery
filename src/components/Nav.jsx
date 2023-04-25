@@ -1,20 +1,42 @@
 import React from "react";
+import "../index.css";
 import { NavLink } from "react-router-dom";
 const Nav = () => {
   return (
     <>
       <section className="flex justify-between  mx-7">
-        <a href="/" className="text-red-500 text-3xl p-3">
+        <a href="/" className="text-red-700 text-3xl p-3">
           MOVIE GALLERY
         </a>
-        <div className="flex justify-center items-center text-red-500 ">
-          <NavLink to={"/"}>Popular </NavLink>
+        <div className="flex justify-center items-center text-red-700 ">
+          <NavLink
+            to="/"
+            style={({ isActive }) => {
+              return {
+                fontSize:isActive ? "900" : "",
+                fontWeight: isActive ? "bold" : "",
+                color: isActive ? "white" : "",
+              };
+            }}
+          >
+            Popular
+          </NavLink>
           <p className="mx-3">|</p>
-          <NavLink to={"/upcoming"}>Upcoming</NavLink>
+               <NavLink
+            to="/upcoming"
+            style={({ isActive }) => {
+              return {
+                fontWeight: isActive ? "bold" : "",
+                color: isActive ? "white" : "",
+              };
+            }}
+          >
+            Upcoming
+          </NavLink>
         </div>
+        {/* search input open */}
         <div className="flex  items-center mr-4">
           <label class="relative block">
-            {/* <span class="sr-only">Search</span> */}
             <button class="absolute inset-y-0 right-2 flex items-center pl-2">
               <svg
                 className="h-8 w-8 text-black"
@@ -40,6 +62,7 @@ const Nav = () => {
             />
           </label>
         </div>
+        {/* search input close */}
       </section>
     </>
   );

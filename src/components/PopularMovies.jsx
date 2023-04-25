@@ -11,6 +11,7 @@ const PopularMovies = () => {
   return (
     <>
       <div className="">
+        <p className="text-red-700 flex justify-center items-center my-20 text-5xl">Popular Movies</p>
         {loading ? (
           <h1>Loading</h1>
         ) : (
@@ -20,7 +21,7 @@ const PopularMovies = () => {
 
               <h1 className="text-white text-4xl"> Most Watched</h1>
             </div> */}
-            <div className="flex w-full h-screen flex-wrap justify-evenly ">
+            <div className="flex w-full h-screen flex-wrap justify-evenly">
               {movies.map((movie) => {
                 return (
                   // card start
@@ -38,15 +39,19 @@ const PopularMovies = () => {
                     </button>
                     {/* text box in card open */}
                     <div className="h-auto">
-                      <p className="text-red-500 text-lg my-2 ">{movie.title}</p>
-                      <p className="text-xs my-2 text-white">
-                        release date : {movie.release_date}
+                      <p className="text-red-700 text-lg my-2 ">
+                        {movie.title}
                       </p>
-                      <p className="text-white mb-1 ">Overview</p>
-                      <p className="text-gray-500 text-xs mb-2">
-                        {movie.overview}
+                      <p className="text-xs my-2 text-white">
+                        - release date : {movie.release_date}
+                      </p>
+                      <p className="text-white mb-1 text-xs">
+                        - Subtitle Language : {movie.original_language}
                       </p>
                     </div>
+                    {/* <p className="text-gray-500 text-xs mb-2">
+                        {movie.overview}
+                      </p> */}
                     {/* text box in card close */}
                   </div>
                   // card close

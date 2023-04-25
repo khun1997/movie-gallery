@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* .active-text{
+@apply text-white
+}
+.no-active-text{
+    @apply text-red-500
+} */
