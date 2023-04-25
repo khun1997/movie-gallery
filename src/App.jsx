@@ -1,15 +1,16 @@
 import "./App.css";
-import "../src/index.css"
-import BodyMovie from "./components/BodyMovie";
-import HomeMovies from "./components/HomeMovies";
-import Nav from "./components/Nav";
+import "../src/index.css";
+import { Route, Routes } from "react-router-dom";
+import HomeLayout from "./layouts/HomeLayout";
+import UpcomingLayout from "./layouts/UpcomingLayout";
 
 function App() {
   return (
     <div className="App">
-      <Nav />
-      <HomeMovies/>
-      <BodyMovie/>
+      <Routes>
+        <Route element={<HomeLayout />} path="/" />
+        <Route element={<UpcomingLayout />} path="/upcoming" />
+      </Routes>
     </div>
   );
 }

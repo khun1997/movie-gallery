@@ -2,7 +2,7 @@ import React from "react";
 import useFetchApi from "../hooks/useFetchApi";
 import { PlayCircleIcon } from "@heroicons/react/24/solid";
 
-const BodyMovie = () => {
+const PopularMovies = () => {
   const url =
     "https://api.themoviedb.org/3/movie/popular?api_key=11356634b9dcf6295eeb70774a206345&language=en-US";
 
@@ -15,11 +15,11 @@ const BodyMovie = () => {
           <h1>Loading</h1>
         ) : (
           <section>
-            <div className="flex items-center justify-center my-10">
+            {/* <div className="flex items-center justify-center my-10">
               <h1 className="text-white text-4xl">Popular | </h1>
 
               <h1 className="text-white text-4xl"> Most Watched</h1>
-            </div>
+            </div> */}
             <div className="flex w-full h-screen flex-wrap justify-evenly ">
               {movies.map((movie) => {
                 return (
@@ -46,12 +46,10 @@ const BodyMovie = () => {
                       <p className="text-gray-500 text-xs mb-2">
                         {movie.overview}
                       </p>
-                      {/* <button className=" w-28 h-9 bottom-3 bg-white text-black border-solid  rounded inline-block ">
-                        Details
-                      </button> */}
                     </div>
                     {/* text box in card close */}
                   </div>
+                  // card close
                 );
               })}
             </div>
@@ -62,4 +60,4 @@ const BodyMovie = () => {
   );
 };
 
-export default BodyMovie;
+export default PopularMovies;

@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 const Nav = () => {
   return (
     <>
@@ -6,6 +7,11 @@ const Nav = () => {
         <a href="/" className="text-red-500 text-3xl p-3">
           MOVIE GALLERY
         </a>
+        <div className="flex justify-center items-center ">
+          <NavLink to={"/"}>Popular </NavLink>
+          <p className="mx-3">|</p>
+          <NavLink to={"/upcoming"}>Upcoming</NavLink>
+        </div>
         <div className="flex  items-center mr-4">
           <label class="relative block">
             {/* <span class="sr-only">Search</span> */}
