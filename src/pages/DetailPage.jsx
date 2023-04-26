@@ -18,7 +18,6 @@ const DetailPage = () => {
     const data = await response.json();
     setMoive(data);
     setLoading(false);
-    console.log(movie);
   };
   return (
     <>
@@ -37,7 +36,7 @@ const DetailPage = () => {
           {/* background */}
 
           {/* text box open */}
-          <div className="flex justify-center items-center">
+          <div className="flex justify-center items-center rounded-xl">
             <div className="absolute flex h-auto justify-center bottom-20 items-center">
               <div className="border-2 ml-20 border-red-600  w-96 ">
                 <img
@@ -74,9 +73,9 @@ const DetailPage = () => {
                 <p className="text-white mt-3 text-sm">
                   Subtitle Language : {movie.original_language}
                 </p>
-                <button className="bg-red-600 flex text-white py-1 px-3 items-center justify-center  rounded-lg mt-3">
+                <button className="bg-red-600 flex text-white py-1 px-2 items-center justify-center  rounded-lg mt-3">
                   <a href={movie.homepage}>Watch</a>
-                  <PlayCircleIcon className="w-7 h-7 ml-1" />
+                  <PlayCircleIcon className="w-7 h-7" />
                 </button>
               </div>
             </div>

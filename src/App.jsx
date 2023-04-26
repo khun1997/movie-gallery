@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import HomeLayout from "./layouts/HomeLayout";
 import UpcomingLayout from "./layouts/UpcomingLayout";
 import DetailLayout from "./layouts/DetailLayout";
+import SearchLayout from "./layouts/SearchLayout";
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
         <Route element={<HomeLayout />} path="/" />
         <Route element={<UpcomingLayout />} path="/upcoming" />
         <Route element={<DetailLayout />} path="/detail/:id" />
-
+        <Route element={<SearchLayout />} path="/search/:title" />
       </Routes>
     </div>
   );

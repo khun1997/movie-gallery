@@ -27,7 +27,7 @@ const HomeMovies = () => {
             interval: 4000,
           }}
         >
-          {movies.map((movie,id) => {
+          {movies.map((movie) => {
             return (
               <SplideSlide>
                 <div
