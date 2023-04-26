@@ -9,7 +9,6 @@ const HomeMovies = () => {
   const [movies, loading] = useFetchApi(
     "https://api.themoviedb.org/3/movie/popular?api_key=11356634b9dcf6295eeb70774a206345&language=en-US"
   );
-  console.log(movies)
   return (
     <div>
       {loading ? (
@@ -52,7 +51,7 @@ const HomeMovies = () => {
                     <div className="justify-center items-center">
                       {/* watch button */}
                       <Link to={`/detail/${movie.id}`} className="my-2 py-2 px-3  bg-red-700 border-solid border-red-700 border-2	 rounded-lg inline-block text-white justify-center items-center hover:scale-110 transition ease-in-out duration-500">
-                        <a > Watch Now</a>
+                         Watch Now
                         <PlayCircleIcon className="w-8 ml-2 inline-block left-0 " />
                       </Link >
                     </div>

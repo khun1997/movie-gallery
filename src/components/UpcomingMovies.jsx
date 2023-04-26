@@ -5,7 +5,6 @@ const UpcomingMovies = () => {
   const url =
     "https://api.themoviedb.org/3/movie/upcoming?api_key=11356634b9dcf6295eeb70774a206345&language=en-US";
   const [movies, loading] = useFetchApi(url);
-  console.log(movies);
   return (
     <>
       <div className="">
@@ -49,9 +48,6 @@ const UpcomingMovies = () => {
                         - Subtitle Language : {movie.original_language}
                       </p>
                     </div>
-                    {/* <p className="text-gray-500 text-xs mb-2">
-                        {movie.overview}
-                      </p> */}
                     {/* text box in card close */}
                   </div>
                   // card close

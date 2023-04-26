@@ -49,9 +49,6 @@ const PopularMovies = () => {
                         - Subtitle Language : {movie.original_language}
                       </p>
                     </div>
-                    {/* <p className="text-gray-500 text-xs mb-2">
-                        {movie.overview}
-                      </p> */}
                     {/* text box in card close */}
                   </div>
                   // card close
